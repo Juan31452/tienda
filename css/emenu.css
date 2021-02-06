@@ -1,0 +1,101 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:#beeb94;
+    font-weight: 200;
+    font-size: 1.5em;
+    font-family: "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+
+header{
+    width: 100%;
+    background: linear-gradient(to bottom,#243f23 0%, #7261a1 100%);
+    background: #4E94ab;
+    position: relative;
+    border: 2px solid rgb(15, 14, 14);
+
+}
+
+/*ocultar checbox*/
+#botonmenu{
+    display: none;
+}
+
+header label{
+    display: none;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-right: 1px solid #fff;
+
+}
+
+header label:hover{
+ cursor: pointer;
+ background: rgb(0,0,0,0.3);   
+}
+
+.menu ul{ /*organizar menu horizontal*/
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+
+}
+
+.menu li{ /*alinear en toda la pantalla*/
+    flex-grow: 1;
+}
+
+.menu li:hover{
+ background: rgba(0,0,0,0.3);   
+}
+
+.menu li a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+@media (max-width:768px) {
+
+    body
+    {
+      background: rgb(54, 230, 186);
+      font-size: 1.5em;
+    }
+       
+    a
+    {
+      min-width: 1em;
+      min-height: 1em;
+    }
+    
+   header label {
+       display: block;
+   }
+
+   
+   .menu{
+       position: absolute;
+       background: #4E94ab;
+       width: 70%;
+       margin-left: -70%;/*ocultar menu*/ 
+       transition: all 0.5s;/*tiempo para abrir menu*/
+
+   }
+
+   .menu ul {/*menu hacia abajo*/
+       flex-direction: column;
+   }
+
+   .menu li{/*colocar borde al menu */
+       border-top: 1px solid #fff;
+   }
+   #botonmenu:checked ~ .menu{
+      margin:0;
+   } 
+}
