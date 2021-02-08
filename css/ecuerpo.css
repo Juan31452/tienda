@@ -24,8 +24,8 @@ a:focus {
   grid-auto-rows: minmax(100px, 300px);
 */
 
-grid-template-columns:  48% 48%;
-grid-template-rows: 110px 300px 110px 110px 300px 110px ;
+grid-template-columns:  47% 47%;
+grid-template-rows: 105px 250px 105px 105px 250px 105px ;
 
 }
 
@@ -98,6 +98,6 @@ footer li a img {
 @media (max-width:768px) {
   .grilla > * 
   {
-    font-size: 1.575rem;
+    font-size: 1.375rem;
   }   
 }
