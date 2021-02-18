@@ -1,48 +1,132 @@
-/*body
+body
 {
     margin: 0;
     padding: 0;
     background-color:#beeb94;
-    font-weight: 200;
-    font-size: 1.5em;
+    /*font-weight: 200;*/
+    font-size: 2.5em;
     font-family: "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  
+    text-align: center;
+    
+    
 }
-*/
+
+h1 
+{
+font: bold 70px verdana, sans-serif;
+color:#adb0e5;
+text-shadow: rgb(0,0,150) 4px 4px 5px;
+}
+
+h2 
+{
+font: bold 50px verdana, sans-serif;
+text-shadow: rgb(0,0,150) 4px 4px 5px;
+}
+
+p
+{
+ text-align: center;
+ font-size: 50px;
+}
+
+header, section, footer, aside, nav, article
+{
+  display: block;
+}
+
 #principal
  {
-   min-height: 100vh;
-   position: relative;
- } 
-h1
+  
+   width: 98%;
+   margin: 10px 10px;
+   text-align: left;
+ }
+
+#cabecera 
 {
-    text-align: center;
-    color: cornflowerblue;
+  background: #9eeb94;
+  border: 1px solid #999999;
+  padding: 20px;
+  text-align: center;
+  /*sombra al texto*/
+-moz-box-shadow: rgb(150,150,150) 5px 5px; 
+ -webkit-box-shadow: rgb(150,150,150) 5px 5px; 
+ box-shadow: rgb(150,150,150) 5px 5px;
+ /*esquinas redondas*/
+-moz-border-radius: 20px 10px 30px 50px; 
+ -webkit-border-radius: 20px 10px 30px 50px; 
+ border-radius: 20px 10px 30px 50px;
+ /*degradado*/
+background: -webkit-linear-gradient(top, #FFFFFF, #006699); 
+ background: -moz-linear-gradient(top, #FFFFFF, #006699);
+  
 }
+
 .contenedor1
 {
-   text-align: center; 
+ /* background-color: rgb(149, 149, 185);*/
+  float: left;
+  width: 90%;
+  height: 80%;
+  margin: 8px;
+  padding: 20px;
+
 }
+
+
+
+article
+{
+  background: #FFFBCC;
+  border: 1px solid #a82667;
+  padding: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+  
+  
+  
+ /*degradado*/
+background: -webkit-linear-gradient(top, #FFFFFF, #006699); 
+ background: -moz-linear-gradient(top, #FFFFFF, #006699);
+  
+ /*esquinas redondas*/
+-moz-border-radius: 20px 10px 30px 50px; 
+ -webkit-border-radius: 20px 10px 30px 50px; 
+ border-radius: 20px 10px 30px 50px;
+ /*trancision*/
+
+}
+
+#columna 
+{
+  float: left;
+  width: 30%;
+  margin: 20px 0px;
+  padding: 20px;
+  background: #9eeb94;
+  border: 1px solid #999999;
+  
+}
+
+
 
 .imagenp
 {
-  width: 45%;
-  height: 45%;
+  width: 80%;
+  height: 80%;
   padding: 10px 10px;
-  margin: 5px 5px;
-
+  
 }
 
-footer 
+#pie 
 {
 
-    background: #333333;
-    padding: 15px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 7%;
-    text-align: right;
+ clear: both;
+ text-align: center;
+ padding: 20px;
+ border-top: 2px solid #999999;
+
 }
 
 footer li 
