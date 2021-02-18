@@ -4,7 +4,7 @@ body
     padding: 0;
     background-color:#beeb94;
     /*font-weight: 200;*/
-    font-size: 2.5em;
+    font-size: 1em;
     font-family: "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center;
     
@@ -13,14 +13,20 @@ body
 
 h1 
 {
-font: bold 70px verdana, sans-serif;
+font: bold 2.2em verdana, sans-serif;
 color:#adb0e5;
 text-shadow: rgb(0,0,150) 4px 4px 5px;
 }
 
 h2 
 {
-font: bold 50px verdana, sans-serif;
+font: bold 1.5em verdana, sans-serif;
+text-shadow: rgb(0,0,150) 4px 4px 5px;
+}
+
+h3 
+{
+font: bold 1.3em verdana, sans-serif;
 text-shadow: rgb(0,0,150) 4px 4px 5px;
 }
 
@@ -30,6 +36,11 @@ p
  font-size: 50px;
 }
 
+#numero
+{
+  font-size: 30px;
+  width: 50px;
+}
 header, section, footer, aside, nav, article
 {
   display: block;
