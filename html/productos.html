@@ -1,80 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
-    <link href="/tienda/css/emenu.css "
-    rel="stylesheet" type="text/css"> 
-    <link href="/tienda/css/ecuerpo.css"
-    rel="stylesheet" type="text/css"> 
-</head>
-<body>
-  <div id=principal>
-      <header>
-         <input type="checkbox" id="botonmenu">
-         <label for="botonmenu"><img src="/tienda/img/open-menu.png" alt="">
-         </label >
-         <nav class="menu">
-              <ul>
-                 <li><a href="/tienda/index.html">Inicio </a></li>
-                 <li><a href="">Productos</a></li>
-                 <li><a href="/tienda/html/historia.html">Historia</a></li>
-                 <li><a href="">Contacto</a></li>
-              </ul>
-          </nav>
-      </header>
+<html lang="es">
+  <head>
+     <meta charset="iso-8859-1">
+     <meta name="description" content="Ejemplo de HTML5">
+     <meta name="keywords" content="HTML5, CSS3, JavaScript">
+     <title>PRODUCTOS</title>
+     <link href="/tienda/css/estilo.css"
+     rel="stylesheet" type="text/css">
+     <link href="/tienda/css/emenu.css"
+     rel="stylesheet" type="text/css">
     
-     <div class="grilla">
-         <div class="item-1">
-               LIMON TAHITI
-         </div>
-       
-         <div class="item-2">
-            <a href="#">
-             <img src="/tienda/img/limon3.jpg" alt="imagenlimon1">
-            </a>
+  </head>
 
-            </div>
+  <body>
+    <div id=principal> 
+       <header id="cabecera">
+          <h1>PRODUCTOS</h1>
+       </header>
 
-         <div class="item-3">
-             <a href="#">
-                 AGUACATE
-             </a>
-         </div>
+       <input type="checkbox" id="botonmenu">
+       <label for="botonmenu">
+          <img class="imagenmenu"
+          src="/tienda/img/open-menu.png" alt="">
+       </label >
 
-         <div class="item-4">
-            <a href="#">
-               <img src="/tienda/img/aguacate.jpg" alt="Aguacate">
-            </a>
-         </div>
+       <nav  class="menu">
+          <ul>
+               <li><a href="/tienda/index.html">Inicio </a> </li>
+               <li><a href="/tienda/html/productos.html">Productos</a></li>
+               <li><a href="/tienda//html/historia.html">Historia</a></li>
+               <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+        <section class="contenedor1">
+         <article>
+              <p>
+                  <h2>
+                     LIMON TAHITI
+                  </h2>
+                </p>
+                <p>
+                    <a href="#">
+                        <img class="imagenp"
+                        src="/tienda/img/limon3.jpg" 
+                        alt="imagenlimon1">
+                    </a>
+               </p>
+               <p>
+                <h3>
+                  Precio 1500 kilo
+                </h3>
+              </p>
+            
+           </article>
+
+         <article>   
+                <p>
+                    <h2>
+                    AGUACATE
+                </h2>
+                    
+                </p>
+                <p>
+                    <a href="#">
+                        <img class="imagenp"
+                        src="/tienda/img/aguacate.jpg"  
+                        alt="Aguacate">
+                    </a>
+                </p>         
+            </p>
+            <p>
+             <h3>
+               Precio 3500 kilo
+             </h3>
+           </p>
+         </article>
+
+      </section>
+     
+
       
-         <div class="item-5">
-            <a href="#">
-              Precio 1500 kilo
-            </a>
-         </div>
-
-         <div class="item-6">
-            <a href="#">
-                Precio 2500 kilo
-            </a>
-         </div>
-
-        </div>
-
-       
-
-     <footer class="scene">
-         <div id="socialmedia">
-            <ul class="group">
-                <li><a href="https://twitter.com"><img class="icon" src="/tienda/iconos/twitter.png" alt="icon for twitter"></a></li>
-                <li><a href="http://www.facebook.com"><img class="icon" src="/tienda/iconos/facebook.png" alt="icon for facebook"></a></li>
-                <li><a href="http://www.youtube.com"><img class="icon" src="/tienda/iconos/youtube.png" alt="icon for youtube"></a></li>
-             </ul>
-          </div>
-
-      </footer>
+      
+      <footer id="pie">
+            Derechos Reservados &copy; 2021-2021
+         </footer>
    </div>
 </body>
 </html>

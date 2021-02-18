@@ -1,62 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HISTORIA</title>
-    <link href="/tienda/css/grilla.css"
-    rel="stylesheet" type="text/css">
-    <link href="/tienda/css/emenu.css"
-    rel="stylesheet" type="text/css">
+<html lang="es">
+  <head>
+     <meta charset="iso-8859-1">
+     <meta name="description" content="Ejemplo de HTML5">
+     <meta name="keywords" content="HTML5, CSS3, JavaScript">
+     <title>HISTORIA</title>
+     <link href="/tienda/css/estilo.css"
+     rel="stylesheet" type="text/css">
+     <link href="/tienda/css/emenu.css"
+     rel="stylesheet" type="text/css">
+    
+  </head>
 
-</head>
-<body>
-    <div class=contenedor>
-      <header>
-         <input type="checkbox" id="botonmenu">
-         <label for="botonmenu"><img src="/tienda/img/open-menu.png" alt="">
-         </label >
-         <nav class="menu">
-             <ul>
-                <li><a href="/tienda/index.html">Inicio </a></li>
-                <li><a href="">Productos</a></li>
-                <li><a href="/tienda/html/historia.html">Historia</a></li>
-                <li><a href="">Contacto</a></li>
-             </ul>
-          </nav>
-     </header>
+  <body>
+    <div id=principal> 
+       <header id="cabecera">
+          <h1>PRODUCTOS</h1>
+       </header>
 
-     <div class="migrilla"> <!-- contenedor -->
-         <div class="a">
-           <p>
-                Cultivo limon Tahiti en el año 2017
+       <input type="checkbox" id="botonmenu">
+       <label for="botonmenu">
+          <img class="imagenmenu"
+          src="/tienda/img/open-menu.png" alt="">
+       </label >
+
+       <nav  class="menu">
+          <ul>
+               <li><a href="/tienda/index.html">Inicio </a> </li>
+               <li><a href="/tienda/html/productos.html">Productos</a></li>
+               <li><a href="/tienda//html/historia.html">Historia</a></li>
+               <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+        <section class="contenedor1">
+         <article>
+              <p>
+                  <h2>
+                    Año 2017
+                  </h2>
+                </p>
+                <p>
+                    <a href="#">
+                        <img img class="imagenp"
+                        src="/tienda/img/limon1-2017.jpg" 
+                        alt="imagenlimon">
+
+                    </a>
+               </p>
+               <p>
+                <h3>
+                  Comentario..
+                </h3>
+              </p>
+            
+           </article>
+
+         <article>   
+                <p>
+                    <h2>
+                    Año 2018
+                </h2>
+                    
+                </p>
+                <p>
+                    <a href="#">
+                        <img img class="imagenp"
+                        src="/tienda/img/limon1-2018.jpg" 
+                        alt="imagenlimon1">
+                    </a>
+                </p>         
             </p>
-         </div> <!-- cada uno de los ítems del grid -->
-        
-         <div class="b">
-             <img src="/tienda/img/limon1-2017.jpg" alt="imagenlimon">
-         </div>
-        
-         <div class="c">
-              <p>
-                 Cultivo limon Tahiti en el año 2018
-              </p>
-          </div>
-        
-          <div class="d">
-                <img src="/tienda/img/limon1-2018.jpg" alt="imagenlimon1">
-          </div>
+            <p>
+             <h3>
+               Comentario
+             </h3>
+           </p>
+         </article>
 
-         <div class="e">
-              <p>
-                 Cultivo limon Tahiti en el año 2020
+         <article>
+            <p>
+                <h2>
+                  Año 2020
+                </h2>
               </p>
-         </div>
-        
-          <div class="f">
-             <img src="/tienda/img/limon2-2020.jpg" alt="imagenlimon1">
-         </div>
-       </div> 
- </div>
+              <p>
+                  <a href="#">
+                      <img img class="imagenp"
+                      src="/tienda/img/limon2-2020.jpg" 
+                      alt="imagenlimon">
+
+                  </a>
+             </p>
+             <p>
+              <h3>
+                Comentario..
+              </h3>
+            </p>
+          
+         </article>
+
+      </section>
+     
+
+      
+      
+      <footer id="pie">
+            Derechos Reservados &copy; 2021-2021
+         </footer>
+   </div>
 </body>
 </html>
