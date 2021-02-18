@@ -1,49 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAGINA PRINCIPAL.</title>
-    <link href="/tienda/css/estilo.css"
-    rel="stylesheet" type="text/css">
-    <link href="/tienda/css/emenu.css"
-    rel="stylesheet" type="text/css">
+<html lang="es">
+  <head>
+     <meta charset="iso-8859-1">
+     <meta name="description" content="Ejemplo de HTML5">
+     <meta name="keywords" content="HTML5, CSS3, JavaScript">
+     <title>PAGINA PRINCIPAL</title>
+     <link href="/tienda/css/estilo.css"
+     rel="stylesheet" type="text/css">
+     <link href="/tienda/css/emenu.css"
+     rel="stylesheet" type="text/css">
     
+  </head>
 
-</head>
-<body>
-    <div id=principal>
-        <header>
-             <input type="checkbox" id="botonmenu">
-             <label for="botonmenu"><img src="/tienda/img/open-menu.png" alt="">
-             </label >
-             <nav class="menu">
-                 <ul>
-                    <li><a href="">Inicio </a></li>
-                    <li><a href="/tienda/html/productos.html">Productos</a></li>
-                    <li><a href="/tienda/html/historia.html">Historia</a></li>
-                    <li><a href="">Contacto</a></li>
-                 </ul>
-             </nav>
-        </header>
-        <div class="contenedor1">
-            <p>
-                <h1>BIENVENIDOS</h1>
-            </p> 
-            <img class="imagenp" src="/tienda/img/Limon2021.jpg" alt="imagenlimon1">
-            
-        </div>
+  <body>
+    <div id=principal> 
+       <header id="cabecera">
+          <h1>BIENVENIDOS</h1>
+       </header>
 
-        <footer class="scene">
-            <div id="socialmedia">
-               <ul class="group">
-                   <li><a href="https://twitter.com"><img class="icon" src="/tienda/iconos/twitter.png" alt="icon for twitter"></a></li>
-                   <li><a href="http://www.facebook.com"><img class="icon" src="/tienda/iconos/facebook.png" alt="icon for facebook"></a></li>
-                   <li><a href="http://www.youtube.com"><img class="icon" src="/tienda/iconos/youtube.png" alt="icon for youtube"></a></li>
-                </ul>
-             </div>
+       <input type="checkbox" id="botonmenu">
+       <label for="botonmenu">
+          <img class="imagenmenu"
+          src="/tienda/img/open-menu.png" alt="">
+       </label >
+
+       <nav  class="menu">
+          <ul>
+               <li><a href="">Inicio </a> </li>
+               <li><a href="/tienda/html/productos.html">Productos</a></li>
+               <li><a href="/tienda/html/historia.html">Historia</a></li>
+               <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+  <section class="contenedor1">
+                 <article>
+               <p>
+                  <h2>
+                    LIMON TAHITI
+                 </h2>
+                  
+               </p>
+               <p>
+                  Tambien conocida como lima de Tahiti, lima persa, limon mesina, limon sin semilla o lima Bearss (nombrada asi en honor de John T. Bearss, quien desarrollo esta variedad sin semillas hacia 1895 en un vivero de Porteville , California ,EEUU.)
+              </p>
    
-        </footer>
-    </div>   
+            </article>
+
+            <article>   
+               <img class="imagenp" 
+               src="/tienda/img/Limon2021.jpg" 
+               alt="imagenlimon1">         
+            </article>
+
+         </section>
+
+      
+      
+      <footer id="pie">
+            Derechos Reservados &copy; 2021-2021
+         </footer>
+   </div>
 </body>
 </html>
