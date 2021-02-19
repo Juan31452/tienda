@@ -12,7 +12,7 @@
 .menu 
 {
    
-    background: #3c5542;
+    /*background: #3c5542;*/
     padding: 15px 25px;
     margin: 10px;
 
@@ -23,7 +23,7 @@
     width: 20px;
     height: 20px;
     padding: 10px;
-    border-right: 1px solid #fff;
+    border-right: 1px solid rgb(190, 189, 189);
 
 }
 
@@ -53,21 +53,32 @@
 
 .menu li a {
     display: block;
-    padding: 15px 20px;
-    color: #fff;
+    padding: 10px 8px;
+    color: rgb(247, 193, 193);
     text-decoration: none;
     
 }
+/*mover menu*/
+.menu li a:hover {
+   transition:1s all;
+  transform:translate(0,-10px);}
 
+    
+}
 
+/**Responsive*/
 
-@media screen and (max-width:600px) 
-{
+@media screen and (max-width: 780px) {
+}
 
+@media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 440px) {
     body
     {
       background: #9eeb94;
-      font-size: 1em;
+      font-size: 1rem;
       
       /*degradado*/
       background: -webkit-linear-gradient(top, #FFFFFF, #006699); 
@@ -91,10 +102,10 @@
     .imagenmenu
     {
         display: block;
-        padding: 20px;
+        padding: 10px;
         margin: 5px;
         float: right;
-        width: 10%;
+        width: 8%;
         background: #d7dcdd;
         
     }
@@ -102,10 +113,10 @@
     .menu{
         position: absolute;
         top:190px;
-        left: 60px;
+        left: 30px;
         background: #4E94ab;
-        width: 50%;
-        margin-left: -80%;/*ocultar menu*/ 
+        width: 40%;
+        margin-left: -88%;/*ocultar menu*/ 
         transition: all 0.5s;/*tiempo para abrir menu*/
  
     }
@@ -113,7 +124,8 @@
     {
       min-width: 1.1em;
       min-height: 1.1em;
-      font-size: 30px;
+      font-size: 23px;
+      
     }   
     
     #botonmenu:checked ~ .menu{
