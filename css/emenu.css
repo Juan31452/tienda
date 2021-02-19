@@ -111,13 +111,13 @@
     }
     .menu li a
     {
-      min-width: 1.5em;
-      min-height: 1.5em;
-      font-size: 40px;
+      min-width: 1.1em;
+      min-height: 1.1em;
+      font-size: 30px;
     }   
     
     #botonmenu:checked ~ .menu{
         margin: 0px;
      } 
-  }
- }
+  
+}
