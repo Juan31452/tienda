@@ -1,0 +1,135 @@
+
+/*ocultar checbox*/
+#botonmenu{
+    display: none;
+}
+
+.imagenmenu
+{
+  display: none;
+}
+
+.menu 
+{
+   
+    /*background: #3c5542;*/
+    padding: 15px 25px;
+    margin: 10px;
+
+}
+
+.menu label{
+    display: none;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    border-right: 1px solid rgb(190, 189, 189);
+
+}
+
+.menu label:hover{
+ cursor: pointer;
+ background: rgb(0,0,0,0.3);   
+}
+
+.menu ul{ /*organizar menu horizontal*/
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+
+}
+
+
+.menu li
+{ /*alinear en toda la pantalla*/
+    flex-grow: 1;
+    font: bold 20px verdana, sans-serif;
+}
+
+.menu li:hover{
+ background: rgba(0,0,0,0.3);   
+}
+
+.menu li a {
+    display: block;
+    padding: 10px 8px;
+    color: rgb(247, 193, 193);
+    text-decoration: none;
+    
+}
+/*mover menu*/
+.menu li a:hover {
+   transition:1s all;
+  transform:translate(0,-10px);}
+
+    
+}
+
+/**Responsive*/
+
+@media screen and (max-width: 780px) {
+}
+
+@media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 440px) {
+    body
+    {
+      background: #9eeb94;
+      font-size: 1rem;
+      
+      /*degradado*/
+      background: -webkit-linear-gradient(top, #FFFFFF, #006699); 
+      background: -moz-linear-gradient(top, #FFFFFF, #006699);
+  
+    }
+    
+    .menu ul {/*menu hacia abajo*/
+        flex-direction: column;
+    }
+
+    .menu li{/*colocar borde al menu */
+        border-top: 1px solid #fff
+        
+    }
+    
+    .menu label {
+        display: block;
+    }
+
+    .imagenmenu
+    {
+        display: block;
+        padding: 10px;
+        margin: 5px;
+        float: right;
+        width: 8%;
+        background: #d7dcdd;
+        
+    }
+
+    .menu{
+        position: absolute;
+        top:190px;
+        left: 30px;
+        background: #4E94ab;
+        width: 40%;
+        margin-left: -88%;/*ocultar menu*/ 
+        transition: all 0.5s;/*tiempo para abrir menu*/
+ 
+    }
+    .menu li a
+    {
+      min-width: 1.1em;
+      min-height: 1.1em;
+      font-size: 23px;
+      
+    }   
+    
+    #botonmenu:checked ~ .menu{
+        margin: 0px;
+     } 
+  
+}
