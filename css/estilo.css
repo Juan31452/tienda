@@ -1,16 +1,13 @@
 body
 {
-    margin: 0;
-    padding: 0;
-    background-color:#beeb94;
-    /*font-weight: 200;*/
-    font-size: 1rem;
-    font-family: "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color:#beeb94;
+  /*font-weight: 200;*/
+  font-size: 1rem;
+  font-family: "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
     
-    /*degradado*/
-background: -webkit-linear-gradient(top, #FFFFFF, #006699); 
-background: -moz-linear-gradient(top, #FFFFFF, #006699);
 
 }
 
@@ -18,13 +15,11 @@ h1
 {
 font: bold 2.2rem verdana, sans-serif;
 color:#adb0e5;
-text-shadow: rgb(0,0,150) 4px 4px 5px;
 }
 
 h2 
 {
 font: bold 2rem verdana, sans-serif;
-text-shadow: rgb(0,0,150) 4px 4px 5px;
 }
 
 h3 
@@ -64,19 +59,8 @@ header, section, footer, aside, nav, article
   border: 1px solid #999999;
   padding: 5px;
   text-align: center;
-  /*sombra al texto*/
--moz-box-shadow: rgb(150,150,150) 5px 5px; 
- -webkit-box-shadow: rgb(150,150,150) 5px 5px; 
- box-shadow: rgb(150,150,150) 5px 5px;
- /*esquinas redondas*/
--moz-border-radius: 20px 10px 30px 50px; 
- -webkit-border-radius: 20px 10px 30px 50px; 
- border-radius: 20px 10px 30px 50px;
- /*degradado*/
-background: -webkit-linear-gradient(top, #FFFFFF, #006699); 
- background: -moz-linear-gradient(top, #FFFFFF, #006699);
   
-}
+  }
 
 .contenedor1
 {
@@ -103,18 +87,6 @@ article
   text-align: center;
   float: left;
 
-  
-  
- /*degradado*/
-background: -webkit-linear-gradient(top, #FFFFFF, #006699); 
- background: -moz-linear-gradient(top, #FFFFFF, #006699);
-  
- /*esquinas redondas*/
--moz-border-radius: 20px 10px 30px 50px; 
- -webkit-border-radius: 20px 10px 30px 50px; 
- border-radius: 20px 10px 30px 50px;
- /*trancision*/
-
 }
 
 #columna 
@@ -134,8 +106,7 @@ background: -webkit-linear-gradient(top, #FFFFFF, #006699);
 {
   width: 50%;
   height: auto;
-  padding: 5px 5px;
-  
+  padding: 5px 5px;  
 }
 
 #pie 
@@ -160,6 +131,7 @@ footer li a img {
     border-radius: 50%;
     overflow: hidden;
     padding-left: 10px;
+   
 }
 
 /*Responsive */
