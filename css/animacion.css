@@ -9,6 +9,8 @@ body
 h1 
 {
 text-shadow: rgb(0,0,150) 4px 4px 5px;
+animation-name: mover;
+animation-duration: 2s;
 transition: all 3s;
 
 }
@@ -22,12 +24,26 @@ transition: all 3s;
 
 span 
 {
-    transform: translate(-500px,100px);
-    -moz-transform: translate(-100px);
-    -o-transform: translate(-100px);
-    -ms-transform: translate(-100px);
-    transition: all 2s;
- }
+  transform: translate(-500px,100px);
+  -moz-transform: translate(-100px);
+  -o-transform: translate(-100px);
+  -ms-transform: translate(-100px);
+  transition: all 2s;
+}
+
+/*mover betun menu*/
+.imagenmenu{
+ -webkit-animation-name: mover;
+ -webkit-animation-duration: 3s;
+ -webkit-animation-delay: 2s;
+ 
+ /*segunda animacion*/
+ -webkit-animation-name: escala;
+ -webkit-animation-duration: 1s;
+ -webkit-animation-iteration-count: infinite;
+ -webkit-animation-direction: alternate;
+ /*-webkit-animation-play-state: paused;*/
+}
 
 #cabecera 
 {
@@ -65,12 +81,12 @@ article
  /*trancision*/
  transition-duration: 3s
 }
+
 .imagenp
 {
   /*opacity: 0.6;*/
   /*sombra*/ 
   box-shadow: #333 5px 5px 5px;
-
   transition: all 2s;/*tiempo para abrir menu*/
   
 }
@@ -85,4 +101,19 @@ article
   transform:scale(1.5,1.5) ;
   z-index: 5;
   
+}
+
+@-webkit-keyframes mover
+{
+  from{-webkit-transform:  translateX(-300px)
+  rotate(0deg);}
+  to{-webkit-transform: translateX(20px)
+  rotate(360deg);}
+}
+
+@-webkit-keyframes escala
+{
+ 0%{ -webkit-transform: scale(1,1);}
+ 50%{ -webkit-transform: scale(.5,.5);}
+ 100%{ -webkit-transform: scale(1,1);}   
 }
