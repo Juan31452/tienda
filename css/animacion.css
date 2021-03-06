@@ -98,7 +98,7 @@ article
   -o-transform: rotate(10deg);
   -ms-transform: rotate(10deg);
   /*opacity: 1;*/
-  transform:scale(1.5,1.5) ;
+  transform:scale(1.1,1) ;
   z-index: 5;
   
 }
