@@ -15,30 +15,61 @@ h1
 {
 font: bold 2.2rem verdana, sans-serif;
 color:#adb0e5;
+position: absolute;
+top: 1px;
+left: 75px;
+
 }
 
 h2 
 {
 font: bold 2rem verdana, sans-serif;
+text-align: center;
 }
 
 h3 
 {
 font: bold 1.5rem verdana, sans-serif;
-
+text-align: center;
 }
 
+h4 
+{
+font: bold 1rem verdana, sans-serif;
+text-align: center;
+}
 p
 {
  text-align: center;
  font-size: 30px;
 }
 
+.logo
+{
+  width: 60px;
+  float: left;
+  margin: 5px;
+
+}
+
+.cant
+{
+  color: #cff17e;
+  }
+
 #numero
 {
-  font-size: 30px;
-  width: 50px;
+  font-size: 20px;
+  color: #cff17e;
+  background-color: #999999;
+  width: 40px;
+  margin: 5px;
 }
+.carrito
+{
+  width: 25px;
+}
+
 header, section, footer, aside, nav, article
 {
   display: block;
@@ -58,8 +89,7 @@ header, section, footer, aside, nav, article
   background: #9eeb94;
   border: 1px solid #999999;
   padding: 5px;
-  text-align: center;
-  
+  float: left;
   }
 
 .contenedor1
@@ -68,14 +98,14 @@ header, section, footer, aside, nav, article
   float: left;
   width: 94%;
   height: auto;
-  margin: 3px;
-  padding: 3px;
+  margin: 2px;
+  padding: 2px;
 
 }
 
 
-
-article
+/*
+.article
 {
   width: 95%;
   height: 50%;
@@ -87,7 +117,7 @@ article
   text-align: center;
   float: left;
 
-}
+}*/
 
 #columna 
 {
@@ -102,11 +132,12 @@ article
 
 
 
+
 .imagenp
 {
   width: 50%;
   height: auto;
-  padding: 5px 5px;  
+  padding: 4px 4px;  
 }
 
 #pie 
@@ -125,15 +156,49 @@ footer li
     padding: 0 15px;
 }
 
-footer li a img {
-    float:left;
-    width: 30px;
-    border-radius: 50%;
-    overflow: hidden;
-    padding-left: 10px;
-   
+footer li a img 
+{
+ float:left;
+ width: 30px;
+ border-radius: 50%;
+ overflow: hidden;
+ padding-left: 10px;   
 }
 
+.rango
+{
+  display: inline-block;
+  width: 20px;
+  height: 150px;
+  padding: 0;
+}
+
+.rango  {
+  display: inline-block;
+  width: 300px;
+  height:50px;
+  padding: 20px 5px;
+  margin: 10px;
+  border: 3px solid #000;
+  background-color: rgb(178, 237, 100);
+  font-size: 1.5rem;
+  color: #a82667;
+  /*transform-origin: 75px 75px;
+  transform: rotate(-90deg);*/
+}
+
+.rango input
+{
+  font-size: 1.2rem;
+  color: #a82667;
+  margin: 3px;
+}
+
+.boton
+{
+  background: #4a811f;
+  text-align: center;
+}
 /*Responsive */
 @media screen and (max-width: 780px) {
 }
