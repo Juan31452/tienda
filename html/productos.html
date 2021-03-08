@@ -10,16 +10,18 @@
      rel="stylesheet" type="text/css">
      <link href="/tienda/css/emenu.css"
      rel="stylesheet" type="text/css">
-      <link href="/tienda/css/animacion.css"
+     <link href="/tienda/css/animacion.css"
      rel="stylesheet" type="text/css">
    
-    
   </head>
 
   <body>
     <div id=principal> 
        <header id="cabecera">
-          <h1>PRODUCTOS</h1>
+          <img class="logo"
+          src="/tienda/img/frutas.png" 
+          alt="logo">
+           <h1>PRODUCTOS</h1>
        </header>
 
        <input type="checkbox" id="botonmenu">
@@ -33,51 +35,79 @@
                <li><a href="/tienda/index.html">Inicio </a> </li>
                <li><a href="/tienda/html/productos.html">Productos</a></li>
                <li><a href="/tienda//html/historia.html">Historia</a></li>
-               <li><a href="">Contacto</a></li>
+               <li><a href="/tienda//html/contactos.html">Contacto</a></li>
             </ul>
         </nav>
         <section class="contenedor1">
          <article>
+          <p>
+             <h2>
+                LIMON TAHITI
+              </h2>
+           </p>
+
+            <p>
+              <a href="#">
+                <img class="imagenp"
+                src="/tienda/img/limon3.jpg" 
+                alt="imagenlimon1">
+              </a>
+           </p>
+
+           <p>
+              <h3>
+                 Precio 1500 kilo
+              </h3>
+           </p>  
+           <p class="cant">
+              Cantidad
+              <input type="number" name="numero" id="numero" min=”0” max=”10”
+              step=”5”>
+              <button class="boton">
+               <img class="carrito"
+               src="/tienda/img/carrito.jpg"  
+               alt="carrito">
+              </button>
               <p>
-                  <h2>
-                     LIMON TAHITI
-                  </h2>
-                </p>
-                <p>
-                    <a href="#">
-                        <img class="imagenp"
-                        src="/tienda/img/limon3.jpg" 
-                        alt="imagenlimon1">
-                    </a>
-               </p>
-               <p>
-                <h3>
-                  Precio 1500 kilo
-                </h3>
-              </p>
-            
+               <h3>
+                 TOTAL :
+               </h3>
+            </p>
+           </p>
+ 
            </article>
 
-         <article>   
-                <p>
-                    <h2>
+        <article>   
+               <p>
+                 <h2>
                     AGUACATE
                 </h2>
                     
-                </p>
-                <p>
-                    <a href="#">
-                        <img class="imagenp"
-                        src="/tienda/img/aguacate.jpg"  
-                        alt="Aguacate">
-                    </a>
-                </p>         
-            </p>
-            <p>
-             <h3>
-               Precio 3500 kilo
-             </h3>
-           </p>
+               </p>
+               <p>
+                  <a href="#">
+                    <img class="imagenp"
+                    src="/tienda/img/aguacate.jpg"  
+                    alt="Aguacate">
+                 </a>
+               </p>         
+          
+             <p>
+                 <h3>
+                  Precio 3500 kilo
+                 </h3>
+                 <p class="cant">
+                  Cantidad
+                  <input type="number" name="numero" id="numero" min=”0” max=”10”
+                  step=”5”>
+                  <button class="boton">
+                     <img class="carrito"
+                     src="/tienda/img/carrito.jpg"  
+                     alt="carrito">
+
+                  </button>
+               </p>
+     
          </article>
 
       </section>
