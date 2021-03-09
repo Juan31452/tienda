@@ -12,6 +12,7 @@
      rel="stylesheet" type="text/css">
      <link href="/tienda/css/animacion.css"
      rel="stylesheet" type="text/css">
+     <script src="/tienda/js/jscript1.js"></script>
    
   </head>
 
@@ -40,7 +41,7 @@
         </nav>
         <section class="contenedor1">
          <article>
-          <p>
+           <p>
              <h2>
                 LIMON TAHITI
               </h2>
@@ -59,23 +60,13 @@
                  Precio 1500 kilo
               </h3>
            </p>  
-           <p class="cant">
-              Cantidad
-              <input type="number" name="numero" id="numero" min=”0” max=”10”
-              step=”5”>
-              <button class="boton">
-               <img class="carrito"
-               src="/tienda/img/carrito.jpg"  
-               alt="carrito">
-              </button>
-              <p>
-               <h3>
-                 TOTAL :
-               </h3>
+            <p class="cant">
+              <span>Cantidad</span>
+              <input type="number" id="numero" onchange="calcular(this.value);" />
+              <br/ >
+              <span>El resultado es: </span> <span id="mitotal"></span>
             </p>
-           </p>
- 
-           </article>
+        </article>
 
         <article>   
                <p>
@@ -94,20 +85,15 @@
           
              <p>
                  <h3>
-                  Precio 3500 kilo
+                   Precio 3500 kilo
                  </h3>
-                 <p class="cant">
-                  Cantidad
-                  <input type="number" name="numero" id="numero" min=”0” max=”10”
-                  step=”5”>
-                  <button class="boton">
-                     <img class="carrito"
-                     src="/tienda/img/carrito.jpg"  
-                     alt="carrito">
-
-                  </button>
+              </p>  
+              <p class="cant">
+                 <span>Cantidad</span>
+                 <input type="number" id="numero" onchange="calcular(this.value);" />
+                 <br/ >
+                 <span>El resultado es: </span> <span id="mitotal"></span>
                </p>
-     
          </article>
 
       </section>
