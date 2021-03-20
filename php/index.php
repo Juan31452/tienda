@@ -1,12 +1,45 @@
 <?php
 include_once('conexion2.php');
-//LEER DATOS
+include_once('calculo.php');
+
+//LEER DATOS se reemplaza por BUSCAR DATOS
 $sql = 'SELECT * FROM productos';
 $gsent= $pdo->prepare($sql);
 $gsent->execute();
 
 $resultado = $gsent->fetchAll();
 //var_dump($resultado);
+
+
+//BUSCAR DATOS
+/*$sql = 'SELECT * FROM productos WHERE Descripcion LIKE :search';
+$seach_terms = isset($_GET['Descripcion']) ?$_GET['Descripcion'] : '' ;
+
+$arr_sql_terms[':search'] = '%' . $seach_terms. '%';
+
+$statement = $pdo->prepare($sql);
+$statement->execute($arr_sql_terms);
+$results = $statement->fetchAll();*/
+
+$sql = 'SELECT * FROM productos WHERE 1 ';
+$seach_terms = isset($_GET['Descripcion']) ?$_GET['Descripcion'] : '' ;
+$search_arr = explode(' ', $seach_terms);
+
+$arr_sql_terms = array();
+$n = 0;
+foreach( $search_arr as $search_term )
+{
+
+  $sql .= " AND Descripcion LIKE :search{$n}";
+  $arr_sql_terms[":search{$n}"] = '%' . $search_term . '%';
+  $n++;
+}
+
+$statement = $pdo->prepare($sql);
+$statement->execute($arr_sql_terms);
+$results = $statement->fetchAll();
+//var_dump($results);
+//header('location:index.php');
 
 //ADICIONAR DATOS
 if ($_POST)
@@ -15,8 +48,7 @@ if ($_POST)
     $Descripcion = $_POST['Descripcion'];
     $Cantidad =  $_POST['Cantidad'];
     $Valor_Unitario = $_POST['Valor_Unitario'];
-    $Valor_Total = $_POST['Valor_Total'];
-
+    $Valor_Total = multiplica($Cantidad,$Valor_Unitario);
     $sql_agregar = 'INSERT INTO productos(Fecha,Descripcion,
     Cantidad,Valor_Unitario,Valor_Total)
     VALUES (?,?,?,?,?)';
@@ -26,14 +58,14 @@ if ($_POST)
      $Valor_Unitario,$Valor_Total   
     ));
     
-    header('location:index.php');
+   // header('Location:index.php');
 
     
 }
 //EDITAR DATOS
-if ($_GET)
+if (isset($_GET['Idproducto']))
 {
-  $Idproducto = $_GET['Idproducto'] ;
+  $Idproducto = $_GET['Idproducto'];
   $sql_unico = 'SELECT * FROM productos WHERE Idproducto=?';
   $gsent_unico= $pdo->prepare($sql_unico);
   $gsent_unico->execute(array(
@@ -48,37 +80,52 @@ if ($_GET)
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+  <script>
+    function borrar_registro(Idborrar)
+    {
+       var confirmacion = confirm('Esta seguro de eliminar este registro')
+    }
+  </script>   
 </head>
 <body>
    <div class="contenedor" >
     <div class="fila">
         <div class="columna">
            <table border=1>
-               <head>
-                <td>FECHA</td>
-                <td>DESCRIPCION</td>
-                <td>CANTIDAD</td>
-                <td>VALOR UNITARIO</td>
-                <td>VALOR TOTAL</td>
-               </head>
-               <body>                
-                <?php foreach($resultado as $dato):?>
-                <div class = "contenido">
-                    <tr>
-                      <td><?php echo $dato['Fecha']?></td>
-                      <td><?php echo $dato['Descripcion']?></td>
-                      <td><?php echo $dato['Cantidad']?></td>
-                      <td><?php echo $dato['Valor_Unitario']?></td>
-                      <td><?php echo $dato['Valor_Total']?></td>
-                      <td><a href="index.php?Idproducto=<?php echo $dato['Idproducto']?>"> Editar </a></td>
-                    </tr>   
+               <thead>
+               <form method="get">
+                BUSCAR : 
+                <input type="text" class="formulario" name="Descripcion" value = "<?php echo $seach_terms; ?>">
+                <input class="button" type="submit" value="BUSCAR" />
+               </form>
+               <td>FECHA</td>
+               <td>DESCRIPCION</td>
+               <td>CANTIDAD</td>
+               <td>VALOR UNITARIO</td>
+               <td>VALOR TOTAL</td>
+               </thead>
+
+               <tbody>
+                  
+                  <?php foreach($results as $rs):?>
+                  <div class = "contenido">
+                   <tr>
+                        <td width="300"><?php echo $rs['Fecha']; ?></td>
+                        <td><?php echo $rs['Descripcion']; ?></td>
+                        <td><?php echo $rs['Cantidad']?></td>
+                        <td><?php echo $rs['Valor_Unitario']?></td>
+                        <td><?php echo $rs['Valor_Total']?></td>
+                        <td><a href="index.php?Idproducto=<?php echo $rs['Idproducto']?>"> Editar </a></td>
+                        <td><a href="eliminar.php?Idproducto=<?php echo $rs['Idproducto']?>"> Eliminar </a></td>
+                   </tr>                 
+                   <?php endforeach?>                 
                  </div>    
-                 <?php endforeach?>
-              </body>
+                 
+              </tbody>
 	        </table>
          </div> 
       </div>
@@ -95,10 +142,8 @@ if ($_GET)
          <input type="text" class="formulario" name="Descripcion"></br>
          CANTIDAD:</br> 
          <input type="text" class="formulario" name="Cantidad"></br>
-         VALOR UNITARIO:</br> 
+         VALOR UNITARIO:</br>
          <input type="text" class="formulario" name="Valor_Unitario"></br>
-         VALOR TOTAL:</br> 
-         <input type="text" class="formulario" name="Valor_Total"></br>
          <button>Agregar</button>
       </form>
       <?php endif ?>
@@ -121,11 +166,7 @@ if ($_GET)
          VALOR UNITARIO:</br> 
          <input type="text" class="formulario" name="Valor_Unitario"
          value="<?php echo $resultado_unico['Valor_Unitario'] ?>"></br>
-         
-         VALOR TOTAL:</br> 
-         <input type="text" class="formulario" name="Valor_Total"
-         value="<?php echo $resultado_unico['Valor_Total'] ?>"></br>
-         
+              
          <input type="hidden" name="Idproducto"
          value="<?php echo $resultado_unico['Idproducto'] ?>">
          <button>Actualizar</button>
@@ -137,3 +178,10 @@ if ($_GET)
 
 </body>
 </html>
+
+<?php
+//cerrar conexion
+$pdo=null;
+$sentencia_eliminar = null;
+
+?>
