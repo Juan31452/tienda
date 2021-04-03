@@ -34,6 +34,7 @@ span
 .contenedorboton
 {
   transition: ease 0.3s;
+  transition: ease 0.3s;
   -webkit-animation-name: efecto;
   -webkit-animation-duration: 1s;
   -webkit-animation-iteration-count: infinite;
