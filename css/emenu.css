@@ -15,6 +15,8 @@
     /*background: #3c5542;*/
     padding: 15px 25px;
     margin: 10px;
+    
+    
 
 }
 
@@ -61,7 +63,7 @@
 /*mover menu*/
 .menu li a:hover {
    transition:1s all;
-  transform:translate(0,-10px);}
+  -webkit-transform:translate(0,-10px);}
 
     
 }
@@ -101,24 +103,27 @@
 
     .imagenmenu
     {
+        position: fixed;
+        right: 20px;
         display: block;
         padding: 10px;
         margin: 5px;
-        float: right;
         width: 8%;
         background: #d7dcdd;
+        z-index: 1;
         
     }
 
     .menu{
-        position: absolute;
+        /*position: absolute;
         top:190px;
-        left: 30px;
+        left: 30px;*/
+        position: fixed;
         background: #4E94ab;
         width: 40%;
         margin-left: -88%;/*ocultar menu*/ 
         transition: all 0.5s;/*tiempo para abrir menu*/
- 
+        z-index: 1;
     }
     .menu li a
     {
@@ -128,6 +133,7 @@
       
     }   
     
+
     #botonmenu:checked ~ .menu{
         margin: 0px;
      } 
